@@ -1,58 +1,78 @@
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4f4f4;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f4f4f4;
+	font-family: sans-serif;
 }
 
 .container {
-    padding: 20px;
-    border: 1px solid #ccc;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Optional: control width */
+	padding: 20px;
+	border: 1px solid #ccc;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	width: 350px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
 }
 
 input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
 }
 
 ol {
-    padding-left: 20px;
+	padding-left: 20px;
+	margin: 0;
 }
 
-li {
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    border-radius: 8px;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+li.task-item {
+	border: 1px solid #ccc;
+	padding: 8px 10px;
+	border-radius: 8px;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	transition: background 0.3s ease;
 }
 
-button {
-    background-color: #ff4d4d;
-    border: none;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 12px;
-    transition: background-color 0.3s ease;
+li.task-item:hover {
+	background-color: #f0f0f0;
 }
 
-button:hover {
-    background-color: #e60000;
+li.no-task {
+	color: #999;
+	font-style: italic;
+	padding: 8px 10px;
 }
-h1 {
-    text-align: center;
+
+.delete-btn {
+	background-color: transparent;
+	border: none;
+	color: #ff4d4d;
+	cursor: pointer;
+	font-size: 14px;
+	display: none;
+	transition: color 0.3s ease;
+}
+
+li.task-item:hover .delete-btn {
+	display: inline;
+}
+
+.delete-btn:hover {
+	color: #cc0000;
 }
